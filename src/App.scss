@@ -1,0 +1,96 @@
+@import "./scss/variables";
+@import "./scss/animation";
+@import "./scss/breakpoints";
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+}
+body {
+  margin: 0;
+}
+.Link {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: $bg;
+  overflow: hidden;
+  @include sm {
+    position: relative;
+    height: 200vh;
+  }
+  @import "./scss/home";
+  @import "./scss/header";
+  @import "./scss/sign";
+  @import "./scss/normal";
+  @import "./scss/bonus";
+  @import "./scss/first";
+  @import "./scss/second";
+  & .mode-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    border: 2px solid $text-header;
+    padding: 10px 30px;
+    border-radius: 10px;
+    @include sm {
+      bottom: 50px;
+      right: 50px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $text-header;
+      transition: 0.3s;
+    }
+    &:active {
+      color: black;
+      border: 1px solid white;
+      background-color: white;
+    }
+  }
+  & .over-btn {
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    border: 2px solid $text-header;
+    padding: 10px 30px;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $text-header;
+      transition: 0.3s;
+    }
+    &:active {
+      color: black;
+      border: 1px solid white;
+      background-color: white;
+    }
+  }
+  & .rules-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    border: 2px solid $text-header;
+    padding: 10px 30px;
+    border-radius: 10px;
+    @include sm {
+      bottom: 150px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $text-header;
+      transition: 0.3s;
+    }
+    &:active {
+      color: black;
+      border: 1px solid white;
+      background-color: white;
+    }
+  }
+}

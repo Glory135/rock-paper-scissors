@@ -1,0 +1,72 @@
+@keyframes container {
+  0% {
+    width: 40%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes mContainer {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+@keyframes player {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes house {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes outline {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes final {
+  0% {
+    transform: translateY(300px) scale(0);
+  }
+  70% {
+    transform: translateY(-10px) scale(1.01);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes media-final {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes highlight {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

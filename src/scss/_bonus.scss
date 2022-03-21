@@ -1,0 +1,7 @@
+& .bonus {
+  width: 100%;
+  height: 70vh;
+  @include sm {
+    height: 70%;
+  }
+}

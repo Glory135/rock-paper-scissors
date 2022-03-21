@@ -1,0 +1,178 @@
+& .normal-container-second {
+  @include position;
+  width: 100%;
+  height: 100%;
+  @include sm {
+    height: 70%;
+  }
+
+  & .second-main-container {
+    position: relative;
+    @include position(center, space-between);
+    width: 45%;
+    height: 70%;
+    animation: container 1.5s 3s forwards;
+    @include sm {
+      height: 70%;
+      width: 100%;
+
+      animation: none;
+    }
+    & .game-final-container {
+      text-align: center;
+      height: 50%;
+      width: 20%;
+      transform: translateY(300px) scale(0);
+      animation: final 1s 3.5s forwards;
+      @include sm {
+        width: 60%;
+        position: absolute;
+        bottom: -100px;
+        left: 20%;
+        animation: media-final 1s 3.5s forwards;
+      }
+
+      & .again-btn {
+        padding: 10px 30px;
+        border-radius: 10px;
+        background-color: white;
+        color: #192648;
+        &:hover {
+          color: #ba5164;
+          cursor: pointer;
+        }
+      }
+    }
+
+    & .player {
+      @include position(center, space-between);
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      animation: mContainer 1s 3s forwards;
+      @include sm {
+        height: 50%;
+        flex-direction: column-reverse;
+        animation: none;
+      }
+      & h3 {
+        @include sm {
+          font-size: 14px;
+        }
+      }
+      & .player-sign-container {
+        position: relative;
+        border-radius: 50%;
+        animation: player 1s 3s forwards reverse;
+        @include sm {
+          animation: none;
+        }
+      }
+      & .winHighlight {
+        position: absolute;
+        border-radius: inherit;
+        width: 150%;
+        height: 150%;
+        top: -25%;
+        left: -25%;
+        background-color: rgba(218, 218, 218, 0.179);
+        transform: scale(0);
+        animation: highlight 1.5s 3s forwards;
+
+        &::after {
+          position: absolute;
+          border-radius: inherit;
+          background-color: rgba(218, 218, 218, 0.104);
+          top: -25%;
+          left: -25%;
+          content: "";
+          width: 150%;
+          height: 150%;
+        }
+        &::before {
+          position: absolute;
+          border-radius: inherit;
+          background-color: rgba(218, 218, 218, 0.056);
+          top: -50%;
+          left: -50%;
+          content: "";
+          width: 200%;
+          height: 200%;
+        }
+      }
+    }
+    & .house {
+      @include position(center, space-between);
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      animation: mContainer 1s 3s forwards;
+      @include sm {
+        height: 50%;
+        flex-direction: column-reverse;
+        animation: none;
+      }
+      & h3 {
+        @include sm {
+          font-size: 14px;
+        }
+      }
+
+      & .house-sign-container {
+        @include position;
+        width: 100%;
+        height: 100%;
+
+        & .house-sign-outline {
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background-color: #182341;
+          animation: outline 0.5s 1s forwards;
+        }
+
+        & .house-sign-main-container {
+          position: relative;
+          border-radius: 50%;
+          animation: sign 1s 3s forwards;
+          transform: scale(0);
+          animation: house 2s 1.5s forwards;
+
+          & .winHighlight {
+            position: absolute;
+            border-radius: inherit;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            background-color: rgba(218, 218, 218, 0.179);
+            transform: scale(0);
+            animation: highlight 1.5s 3s forwards;
+
+            &::after {
+              position: absolute;
+              border-radius: inherit;
+              background-color: rgba(218, 218, 218, 0.104);
+              top: -25%;
+              left: -25%;
+              content: "";
+              width: 150%;
+              height: 150%;
+            }
+            &::before {
+              position: absolute;
+              border-radius: inherit;
+              background-color: rgba(218, 218, 218, 0.056);
+              top: -50%;
+              left: -50%;
+              content: "";
+              width: 200%;
+              height: 200%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

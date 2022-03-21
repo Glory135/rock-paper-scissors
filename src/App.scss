@@ -31,6 +31,17 @@ main {
   @import "./scss/bonus";
   @import "./scss/first";
   @import "./scss/second";
+
+  & .attribution {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    & a {
+      color: blue;
+    }
+  }
+
   & .mode-btn {
     position: absolute;
     bottom: 50px;

@@ -50,7 +50,7 @@ export const Second = ({
       setStatus("lose");
       setScore(score - 1);
     }
-  }, [playerSignName, houseSignName]);
+  }, [playerSignName, houseSignName]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className='normal-container-second'>
